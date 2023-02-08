@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+    background: pink;
+}
+*{
+  margin:0;
+  padding:0;
+
+}
+.container{
+
+  height:100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+h1{
+  font-size:4rem;
+    position: absolute;
+  top:0.1rem;
+font-family: 'Annie Use Your Telescope', cursive;
+  font-weight: bolder;
+  text-align:cen;
+}
+#hangman{
+  transform: scale(3.4);
+  position: absolute;
+  top:12rem;
+}
+#cloud1,#cloud2{
+  position: absolute;
+  top:2%;
+  right:50%;
+    transform: scaleY(-1);
+}
+#hangman2{
+  transform: scale(3.4);
+  position: absolute;
+  top:12rem;
+  opacity: 0.3;
+  
+}
+
+.Button {
+  width:4rem;
+  height:90%;
+  padding: 1rem;
+  margin: 0.2rem;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-color: green;
+  color:green;
+}
+#keyboard div:nth-child(25){
+  width:1fr;
+  grid-column-start: 6;
+  grid-column-end: 7;
+}
+#keyboard div:nth-child(26){
+  width:1fr;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+#keyboard{
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(2,1fr);
+  position: relative;
+  top:63%;
+  text-align: center;
+  margin: 20px auto;
+  padding: 1rem;
+}
+#hearts{
+  position: absolute;
+  height:100vh;
+  width:100vw;
+}
+
+
+
+show{
+  width:60%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top:54%;
+  font-size: 1.3rem;
+}
+.word-box{
+  padding:0.8rem;
+  padding-right:0.7rem;
+  margin:0.5rem;
+  background:magenta;
+  color:white;
+  letter-spacing: 0.8rem;
+  border-radius:5px;
+}
+.hide{
+  display:none !important;
+}
+.hang{
+  animation: hang 1.6s ease-in forwards;
+}
+.swing{
+   animation: swing 1.6s ease-in forwards infinite;
+}
+@keyframes hang {
+  20%{
+    transform: translateY(2px);
+  }
+  90%{
+    transform: translateY(2px) rotateZ(1deg);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+@keyframes swing {
+  50%{
+    transform:rotateZ(30deg)
+  }
+   100%{
+    transform:rotateZ(-30deg)
+  }
+}
+
+.right{
+  background-color:#60d760;
+}
+.wrong{
+ background-color:#ec6a6a;
+  color:red;
+}
+
+.btn{ 
+  transform: translate(20rem,-4rem);
+  position: absolute;
+  padding:0.8rem;
+  margin:0.5rem;
+  background:#a815a8;
+  color:white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn:active{
+  transform: translate(20rem,-4rem) scale(0.9);
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+transform: scale(0.65) translateY(-100px);
+  }
+  #keyboard{
+transform:translateY(120px);
+  }
+  show{
+  top:82.5%;
+  }
+}
+/*----------------------------- mmedi queris in css--------------------- */
+
+@media (max-width: 600px) {
+  .container {  
+      width: 90vw;
+      height: 80vh;
+  }
+
+  .wave {
+      top: 85%;
+  }
+
+  .weathercon {
+      font-size: 5em;
+  }
+
+  .info {
+      font-size: 1.5rem;
+  }
+}
+@media (max-height: 500px) {
+  .box {
+      width: 90vw;
+      height: 80vh;
+  }
+
+  .wave {
+      top: 115%;
+  }
+
+}
+
+body>span {
+  width: 100vw;
+  text-align: center;
+  color: gray;
+}
+
+
+/*----------- wind animatiom ----------------*/
